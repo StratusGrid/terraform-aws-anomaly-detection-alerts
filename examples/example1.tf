@@ -1,7 +1,10 @@
-module "template_terraform_module_starter" {
-  source     = "StratusGrid/template-terraform-module-starter/aws"
+module "aws_anomaly_detection_alerts {
+  source     = "StratusGrid/terraform-aws-anomaly-detection-alerts"
   version    = "1.0.0"
-  # source   = "github.com/StratusGrid/terraform-aws-template-terraform-module-starter"
-  name       = "${var.name_prefix}-template-terraform-module-starter${local.name_suffix}"
+  name       = "${var.name_prefix}-anomaly-detection-alerts${local.name_suffix}"
   input_tags = merge(local.common_tags, {})
+
+  cost_threshold = 100 // This is a sample of $100
+  subscription_email = "mygroup@example.com" // please change this
 }
+
