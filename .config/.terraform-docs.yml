@@ -1,0 +1,50 @@
+version: ""
+
+formatter: markdown table
+
+name: template-terraform-module-starter
+
+content: |-
+  # template-terraform-module-starter
+
+  GitHub: [StratusGrid/template-terraform-module-starter](https://github.com/StratusGrid/template-terraform-module-starter)
+
+  This Repo is meant to act as a template which can be used
+  when creating new modules.
+
+  NOTE! Don't forget to change the module source repo tag in `tags.tf`!
+
+  ## Example
+
+  ```hcl
+  {{ include "examples/example1.tf" }}
+  ```
+
+  ---
+
+  {{ .Requirements }}
+
+  {{ .Resources }}
+
+  {{ .Inputs }}
+
+  {{ .Outputs }}
+
+  ---
+
+  Note, manual changes to the README will be overwritten when the documentation is updated. To update the documentation, run `terraform-docs -c .config/.terraform-docs.yml`
+
+sections:
+  show:
+    - requirements
+    - resources
+    - inputs
+    - outputs
+
+sort:
+  enabled: true
+  by: name
+
+output:
+  file: README.md
+  mode: replace
