@@ -1,4 +1,4 @@
-version: "1.0.0"
+version: ""
 
 formatter: markdown table
 
@@ -28,6 +28,7 @@ content: |-
   ## How to set this up in your Dev environment
   
   ### Before this is applied, you need to configure the git hook on your local machine
+  
   ```bash
   #Verify you have bash5
   brew install bash
@@ -42,7 +43,7 @@ content: |-
   ## Example
 
   ```hcl
-  {{ include "examples/example1.tf" }}
+  {{ include "examples/example1.tfnot" }}
   ```
 
   ---
