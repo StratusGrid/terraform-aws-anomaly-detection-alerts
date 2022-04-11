@@ -1,5 +1,5 @@
 resource "aws_cloudformation_stack" "anomaly_detection" {
-  name          = "AnomalyDetection"
+  name          = var.name
   tags          = local.tags
   template_body = <<-STACK
     Resources:
