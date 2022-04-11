@@ -21,15 +21,15 @@ jobs:
       minVersion: ${{ steps.minMax.outputs.minVersion }}
       maxVersion: ${{ steps.minMax.outputs.maxVersion }}
 
-  preCommitMinVersion:
-    name: Min TF pre-commit
+  preCommitMaxVersion:
+    name: Max TF pre-commit
     runs-on: ubuntu-latest
     needs: getBaseVersion
     strategy:
       fail-fast: false
       matrix:
         version:
-          - ${{ needs.getBaseVersion.outputs.minVersion }}
+          - ${{ needs.getBaseVersion.outputs.maxVersion }}
     steps:
       - uses: actions/setup-go@v2
         with:
@@ -53,6 +53,6 @@ jobs:
         run: |
            tflint --init
       - name: Execute pre-commit
-        # Run all pre-commit checks on min version supported
+        # Run all pre-commit checks on max version supported
         if: ${{ matrix.version ==  needs.getBaseVersion.outputs.maxVersion }}
         run: pre-commit run --color=always --show-diff-on-failure --all-files
