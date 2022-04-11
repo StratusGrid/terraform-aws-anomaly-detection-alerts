@@ -53,7 +53,7 @@ jobs:
         run: |
            tflint --init
       - name: Execute pre-commit
-        # Run all pre-commit checks on max version supported
+        # Run all pre-commit checks on min version supported
         if: ${{ matrix.version ==  needs.getBaseVersion.outputs.minVersion }}
         run: pre-commit run --color=always --show-diff-on-failure --all-files
   
