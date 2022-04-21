@@ -39,7 +39,7 @@ pre-commit install
 ```hcl
 module "aws_anomaly_detection_alerts" {
   source     = "StratusGrid/anomaly-detection-alerts/aws"
-  version    = "1.0.2"
+  version    = "2.0.0"
   name       = "${var.name_prefix}-anomaly-detection-alerts${local.name_suffix}"
   input_tags = merge(local.common_tags, {})
 
@@ -55,7 +55,7 @@ module "aws_anomaly_detection_alerts" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.1.7 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 3.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 4.9.0 |
 
 ## Resources
 
