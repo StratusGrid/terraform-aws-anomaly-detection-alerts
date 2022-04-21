@@ -1,5 +1,5 @@
 locals {
   tags = merge(var.input_tags, {
-    "ModuleSourceRepo" = "github.com/StratusGrid/terraform-aws-template-terraform-module-starter"
+    "ModuleSourceRepo" = "https://github.com/StratusGrid/terraform-aws-anomaly-detection-alerts"
   })
 }
