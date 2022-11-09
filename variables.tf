@@ -16,8 +16,3 @@ variable "subscription_email" {
   description = "This is the email address that gets notified when an anomaly is detected."
   type        = string
 }
-
-variable "name" {
-  description = "The name of the CloudFormation stack."
-  type        = string
-}
