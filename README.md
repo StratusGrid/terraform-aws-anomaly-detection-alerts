@@ -55,13 +55,14 @@ module "aws_anomaly_detection_alerts" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.1 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 4.9.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.20.0 |
 
 ## Resources
 
 | Name | Type |
 |------|------|
-| [aws_cloudformation_stack.anomaly_detection](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudformation_stack) | resource |
+| [aws_ce_anomaly_monitor.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ce_anomaly_monitor) | resource |
+| [aws_ce_anomaly_subscription.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ce_anomaly_subscription) | resource |
 
 ## Inputs
 
