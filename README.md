@@ -55,21 +55,22 @@ module "aws_anomaly_detection_alerts" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.1 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.9 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.20.0 |
 
 ## Resources
 
 | Name | Type |
 |------|------|
-| [aws_cloudformation_stack.anomaly_detection](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudformation_stack) | resource |
+| [aws_ce_anomaly_monitor.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ce_anomaly_monitor) | resource |
+| [aws_ce_anomaly_subscription.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ce_anomaly_subscription) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_cost_threshold"></a> [cost\_threshold](#input\_cost\_threshold) | Defines the amount in the account currency before AWS sends an email to the subscriber(s) that an anomaly was detected. | `number` | n/a | yes |
+| <a name="input_enable_cost_anomaly_detection"></a> [enable\_cost\_anomaly\_detection](#input\_enable\_cost\_anomaly\_detection) | Boolean to enable or disable Cost Explorer Anomaly Detection monitor and subscription. | `bool` | `true` | no |
 | <a name="input_input_tags"></a> [input\_tags](#input\_input\_tags) | Map of tags to apply to resources | `map(string)` | <pre>{<br>  "Developer": "StratusGrid",<br>  "Provisioner": "Terraform"<br>}</pre> | no |
-| <a name="input_name"></a> [name](#input\_name) | The name of the CloudFormation stack. | `string` | n/a | yes |
 | <a name="input_subscription_email"></a> [subscription\_email](#input\_subscription\_email) | This is the email address that gets notified when an anomaly is detected. | `string` | n/a | yes |
 
 ## Outputs
