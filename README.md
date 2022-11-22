@@ -57,6 +57,7 @@ module "aws_anomaly_detection_alerts" {
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.1 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.20.0 |
 
+
 ## Resources
 
 | Name | Type |
