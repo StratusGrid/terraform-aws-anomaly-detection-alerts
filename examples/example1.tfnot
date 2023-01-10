@@ -1,7 +1,7 @@
 module "aws_anomaly_detection_alerts" {
   source     = "StratusGrid/anomaly-detection-alerts/aws"
-  version    = "2.0.0"
-  name       = "${var.name_prefix}-anomaly-detection-alerts${local.name_suffix}"
+  version    = "3.0.0"
+
   input_tags = merge(local.common_tags, {})
 
   cost_threshold     = 100                   # This is a sample of 100
