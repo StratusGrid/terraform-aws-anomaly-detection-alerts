@@ -1,3 +1,5 @@
+header-from: ./.config/header.md
+
 version: ""
 
 formatter: markdown table
@@ -5,6 +7,8 @@ formatter: markdown table
 name: terraform-aws-anomaly-detection-alerts
 
 content: |-
+ {{ .Header }}
+
   # terraform-aws-anomaly-detection-alerts
 
   GitHub: [StratusGrid/terraform-aws-anomaly-detection-alerts](https://github.com/StratusGrid/terraform-aws-anomaly-detection-alerts)
@@ -62,6 +66,7 @@ content: |-
 
 sections:
   show:
+    - header
     - requirements
     - resources
     - inputs
