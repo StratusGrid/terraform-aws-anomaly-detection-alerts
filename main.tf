@@ -14,7 +14,13 @@ resource "aws_ce_anomaly_subscription" "this" {
   name             = "AnomalyDetected_is_greater_than_${var.cost_threshold}_monies"
   monitor_arn_list = [aws_ce_anomaly_monitor.this[0].arn]
   frequency        = "DAILY"
-  threshold        = var.cost_threshold
+  threshold_expression {
+    dimension {
+      key           = "ANOMALY_TOTAL_IMPACT_ABSOLUTE"
+      values        = [tostring(var.cost_threshold)]
+      match_options = ["GREATER_THAN_OR_EQUAL"]
+    }
+  }
   subscriber {
     address = var.subscription_email
     type    = "EMAIL"
