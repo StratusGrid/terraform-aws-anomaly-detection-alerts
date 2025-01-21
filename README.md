@@ -81,7 +81,7 @@
 |------|-------------|------|---------|:--------:|
 | <a name="input_cost_threshold"></a> [cost\_threshold](#input\_cost\_threshold) | Defines the amount in the account currency before AWS sends an email to the subscriber(s) that an anomaly was detected. | `number` | n/a | yes |
 | <a name="input_enable_cost_anomaly_detection"></a> [enable\_cost\_anomaly\_detection](#input\_enable\_cost\_anomaly\_detection) | Boolean to enable or disable Cost Explorer Anomaly Detection monitor and subscription. | `bool` | `true` | no |
-| <a name="input_input_tags"></a> [input\_tags](#input\_input\_tags) | Map of tags to apply to resources | `map(string)` | <pre>{<br>  "Developer": "StratusGrid",<br>  "Provisioner": "Terraform"<br>}</pre> | no |
+| <a name="input_input_tags"></a> [input\_tags](#input\_input\_tags) | Map of tags to apply to resources | `map(string)` | <pre>{<br/>  "Developer": "StratusGrid",<br/>  "Provisioner": "Terraform"<br/>}</pre> | no |
 | <a name="input_subscription_email"></a> [subscription\_email](#input\_subscription\_email) | This is the email address that gets notified when an anomaly is detected. | `string` | n/a | yes |
 
  ## Outputs
