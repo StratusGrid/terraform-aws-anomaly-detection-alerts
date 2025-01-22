@@ -46,3 +46,5 @@ override.tf.json
 
 .pre-commit-config.yaml
 .prettierignore
+
+/node_modules
